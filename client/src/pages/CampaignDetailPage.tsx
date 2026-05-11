@@ -177,6 +177,11 @@ export function CampaignDetailPage() {
                     Sent on {new Date(campaign.sent_at).toLocaleString()}
                   </p>
                 )}
+                {campaign.status === 'sent' && stats && stats.failed > 0 && (
+                  <p className="text-xs text-amber-600 bg-amber-50 rounded-lg px-3 py-2">
+                    Send completed with {stats.failed} failed recipient{stats.failed !== 1 ? 's' : ''}.
+                  </p>
+                )}
                 <div className="flex flex-wrap gap-2">
                   {canEdit && (
                     <Button size="sm" variant="secondary" className="gap-1.5" onClick={() => { setEditName(campaign.name); setEditSubject(campaign.subject); setEditBody(campaign.body || ''); setShowEdit(true); }}>
