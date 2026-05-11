@@ -1,0 +1,19 @@
+node_modules/
+dist/
+
+# Claude Code agent settings — local only
+.claude/
+
+# Environment files — copy from .env.example
+.env
+server/.env
+server/.env.test
+server/.env.test.local
+server/.env.production
+
+# Client build output
+client/dist/
+
+# Playwright
+test-results/
+playwright-report/

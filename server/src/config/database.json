@@ -1,0 +1,7 @@
+{
+  "development": {
+    "url": "postgresql://campaign_user:campaign_password@localhost:5432/campaign_db",
+    "dialect": "postgres",
+    "logging": false
+  }
+}

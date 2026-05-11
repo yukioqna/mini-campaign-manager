@@ -1,0 +1,20 @@
+{
+  "name": "mini-campaign-manager",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn workspace server dev\" \"yarn workspace client dev\"",
+    "build": "yarn workspace server build && yarn workspace client build",
+    "test": "yarn workspace server test",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "concurrently": "^8.2.0"
+  }
+}
